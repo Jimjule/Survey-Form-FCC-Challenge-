@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+  background-color: #137d7d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  padding: 2vw;
+  font-family: 'Comfortaa', cursive;
+  font-size: 5vw;
+}
+
+p {
+  font-size: 2vw;
+}
+
+#formDivTitle {
+ width: 80vw;
+ background-color: #FFEEFF;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#formDiv {
+ padding: 2vw;
+ font-size: 2vw;
+ width: 80vw;
+ background-color: #FFEEFF;
+ display: grid;
+ grid-template-columns: 45% 50%;
+ grid-gap: 5%;
+ grid-row-gap: 2vw;
+}
+
+#name-label, #email-label, #number-label, #dropdown-label, #rating-label, #interested-label, #comments-label {
+  justify-self: end;
+}
+
+#name, #email, #age, #dropdown, #label, #rating, #interested, #comments {
+  justify-self: start;
+}
+
+#rating, #interested {
+  font-size: 1.5vw;
+}
+  </style>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <div id = "formDivTitle">
+      <br><br>
+      <p id = "description">What do you think of my site?</p>
+    </div>
+
+      <form id = "survey-form">
+        <div id = "formDiv">
+        <label id = "name-label">* Name:</label>
+        <div id = "nameDiv"><input type = "text" id="name" placeholder = "Your Name" required></div>
+        <label id = "email-label">* Email:</label>
+        <div id = "emailDiv"><input type = "email" id = "email" placeholder = "Your Email Address" required></div>
+        <label id = "number-label">* Age:</label>
+          <div id = "numberDiv"><input type = "number" min = 18 max = 130 id = "number" placeholder = "Age" required>
+        </div>
+        <div id = "dropdown-label">Favourite Page</div>
+        <div id = "dropdown" name = "dropdown"><select>
+          <option value = "Home">Home</option>
+          <option value = "Projects">Projects</option>
+          <option value = "Blog">Blog</option>
+          <option value = "Tutorials">Tutorials</option>
+          </select>
+          </div>
+          <div id = "rating-label">* Rating</div>
+          <div id = "rating">
+            <input type = "radio" name = "rating" value = "1">1<br>
+            <input type = "radio" name = "rating" value = "2">2<br>
+            <input type = "radio" name = "rating" value = "3">3<br>
+            <input type = "radio" name = "rating" value = "4">4<br>
+            <input type = "radio" name = "rating" value = "5">5
+          </div>
+        <div id = "interested-label">Interested in More</div>
+        <div id = "interested">
+          <input type = "checkbox" value = "About Me">About Me
+          <input type = "checkbox" value = "Projects">Projects
+          <br>
+          <input type = "checkbox" value = "Blog Posts">Blog Posts
+          <input type = "checkbox" value = "Tutorials">Tutorials
+        </div>
+        <div id = "comments-label"> Comments and Thoughts</div>
+        <div id = "comments">
+          <textarea></textarea>
+        </div>
+        <div></div>
+        <div><button id = "submit" class = "btn btn-primary">Submit</button></div>
+      </form>
+        Designed by Jules
+    </div>
+  </body>
+</html>  
